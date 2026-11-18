@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="V GURUMOORTHY — Full Stack Developer focused on Java Full Stack Development, backend engineering, Spring Boot, Microservices, REST APIs, and React.js."
+  />
+  <meta name="theme-color" content="#09090b" />
+  <title>V GURUMOORTHY | Full Stack Developer</title>
+
+  <!-- Inline SVG Favicon (VG Monogram) -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238b5cf6'/%3E%3Cstop offset='100%25' stop-color='%236d28d9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2309090b'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23f4f4f8' font-family='system-ui,sans-serif' font-weight='800' font-size='26' letter-spacing='-1'%3EVG%3C/text%3E%3C/svg%3E"
+  />
+
+  <!-- Typography: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Ambient Top Background Glow -->
+  <div class="bg-ambient" aria-hidden="true"></div>
+
+  <!-- Fixed Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="V GURUMOORTHY — Back to top">
+        <span class="brand-mark" aria-hidden="true">VG</span>
+        <span class="brand-name">V GURUMOORTHY</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#internship">Internship</a></li>
+          <li><a class="nav-link" href="#education">Education</a></li>
+          <li><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="drawer-open"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Accessible Mobile Navigation Drawer (Modal Dialog + Native Scroll Snap) -->
+  <dialog class="drawer" id="mobile-drawer" aria-label="Mobile navigation">
+    <div class="drawer-scroller">
+      <nav class="drawer-sheet" aria-label="Mobile primary navigation">
+        <div class="drawer-header">
+          <a href="#home" class="brand drawer-link" aria-label="V GURUMOORTHY — Home">
+            <span class="brand-mark" aria-hidden="true">VG</span>
+            <span class="brand-name">V GURUMOORTHY</span>
+          </a>
+          <button
+            type="button"
+            class="drawer-close"
+            id="drawer-close"
+            aria-label="Close navigation menu"
+            autofocus
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="drawer-nav-list">
+          <li><a class="drawer-link" href="#home">Home</a></li>
+          <li><a class="drawer-link" href="#about">About Me</a></li>
+          <li><a class="drawer-link" href="#skills">Technical Skills</a></li>
+          <li><a class="drawer-link" href="#projects">Projects</a></li>
+          <li><a class="drawer-link" href="#internship">Internship</a></li>
+          <li><a class="drawer-link" href="#education">Education</a></li>
+          <li><a class="drawer-link" href="#achievements">Achievements</a></li>
+          <li><a class="drawer-link" href="#certifications">Certifications</a></li>
+          <li><a class="drawer-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="drawer-footer">
+          <a
+            href="My_Resume_org.docx"
+            download="V_Gurumoorthy_Resume.docx"
+            class="btn btn-primary btn-full"
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </dialog>
+
+  <main id="main-content">
+    <!-- ==================== HERO ==================== -->
+    <section class="hero section" id="home" aria-labelledby="hero-heading">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Java Full Stack &amp; Backend Engineering</span>
+        </div>
+
+        <h1 id="hero-heading" class="hero-name">V GURUMOORTHY</h1>
+        <p class="hero-role">Full Stack Developer</p>
+
+        <p class="hero-intro">
+          Electronics and Communication Engineering student focused on Java Full Stack Development
+          and backend engineering &mdash; building REST APIs, microservices-based applications, and
+          interactive web applications using Java, Spring Boot, React.js, and databases.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a
+            href="My_Resume_org.docx"
+            download="V_Gurumoorthy_Resume.docx"
+            class="btn btn-secondary"
+          >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Resume</span>
+          </a>
+        </div>
+
+        <div class="hero-socials" aria-label="Direct links">
+          <a
+            href="https://github.com/Gurumoorthy292"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-chip"
+            aria-label="GitHub profile (opens in new tab)"
+          >
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gurumoorthyv/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-chip"
+            aria-label="LinkedIn profile (opens in new tab)"
+          >
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="mailto:gurumoorthy5306@gmail.com"
+            class="social-chip"
+            aria-label="Send email to gurumoorthy5306@gmail.com"
+          >
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span>gurumoorthy5306@gmail.com</span>
+          </a>
+          <a
+            href="tel:+918610682358"
+            class="social-chip"
+            aria-label="Call +91 8610682358"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+91 8610682358</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ME ==================== -->
+    <section class="section section-alt" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">01 // Profile</p>
+          <h2 id="about-heading" class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="card about-narrative reveal">
+            <h3 class="card-subtitle">Professional Summary</h3>
+            <p class="body-text">
+              Electronics and Communication Engineering student focused on
+              <strong>Java Full Stack Development</strong> and <strong>backend engineering</strong>.
+              Experienced in building <strong>REST APIs</strong>, microservices-based applications,
+              and interactive web applications using <strong>Java, Spring Boot, React.js</strong>,
+              and databases. Interested in developing scalable software solutions and continuously
+              improving problem-solving skills.
+            </p>
+            <p class="body-text">
+              Strengthens core algorithmic thinking through competitive programming with
+              <strong>200+ LeetCode problems solved</strong> and a
+              <strong>LeetCode contest rating of 1473</strong>.
+            </p>
+          </div>
+
+          <aside class="card about-snapshot reveal" aria-label="Quick profile details">
+            <h3 class="card-subtitle">Quick Overview</h3>
+            <dl class="snapshot-list">
+              <div class="snapshot-row">
+                <dt>Degree</dt>
+                <dd>B.E. ECE</dd>
+              </div>
+              <div class="snapshot-row">
+                <dt>College</dt>
+                <dd>Karpagam College of Engineering, Coimbatore</dd>
+              </div>
+              <div class="snapshot-row">
+                <dt>Graduation</dt>
+                <dd>Expected April 2028</dd>
+              </div>
+              <div class="snapshot-row">
+                <dt>CGPA</dt>
+                <dd class="mono-highlight">8.4 / 10</dd>
+              </div>
+              <div class="snapshot-row">
+                <dt>Location</dt>
+                <dd>Krishnagiri, Tamil Nadu, India</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">02 // Capabilities</p>
+          <h2 id="skills-heading" class="section-title">Technical Skills</h2>
+          <p class="section-lead">
+            Core technologies, frameworks, databases, and tools for full-stack and backend software
+            development.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <article class="card skill-card reveal">
+            <div class="card-icon-row">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="card-title">Frontend</h3>
+            </div>
+            <ul class="pill-list" aria-label="Frontend skills">
+              <li class="skill-pill">HTML</li>
+              <li class="skill-pill">CSS</li>
+              <li class="skill-pill">JavaScript</li>
+              <li class="skill-pill">React.js</li>
+            </ul>
+          </article>
+
+          <!-- Backend -->
+          <article class="card skill-card reveal">
+            <div class="card-icon-row">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="7" rx="2"></rect>
+                  <rect x="2" y="14" width="20" height="7" rx="2"></rect>
+                  <line x1="6" y1="6.5" x2="6.01" y2="6.5"></line>
+                  <line x1="6" y1="17.5" x2="6.01" y2="17.5"></line>
+                </svg>
+              </div>
+              <h3 class="card-title">Backend</h3>
+            </div>
+            <ul class="pill-list" aria-label="Backend skills">
+              <li class="skill-pill">Java</li>
+              <li class="skill-pill">Spring Boot</li>
+              <li class="skill-pill">Microservices</li>
+              <li class="skill-pill">REST APIs</li>
+            </ul>
+          </article>
+
+          <!-- Databases -->
+          <article class="card skill-card reveal">
+            <div class="card-icon-row">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Databases</h3>
+            </div>
+            <ul class="pill-list" aria-label="Database skills">
+              <li class="skill-pill">Oracle</li>
+              <li class="skill-pill">MongoDB</li>
+            </ul>
+          </article>
+
+          <!-- Tools -->
+          <article class="card skill-card reveal">
+            <div class="card-icon-row">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Tools</h3>
+            </div>
+            <ul class="pill-list" aria-label="Developer tools">
+              <li class="skill-pill">Git</li>
+              <li class="skill-pill">GitHub</li>
+              <li class="skill-pill">Postman</li>
+              <li class="skill-pill">Docker</li>
+            </ul>
+          </article>
+
+          <!-- Programming -->
+          <article class="card skill-card reveal">
+            <div class="card-icon-row">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="card-title">Programming</h3>
+            </div>
+            <ul class="pill-list" aria-label="Programming languages">
+              <li class="skill-pill">Java</li>
+              <li class="skill-pill">C++</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="section section-alt" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">03 // Selected Work</p>
+          <h2 id="projects-heading" class="section-title">Projects</h2>
+          <p class="section-lead">
+            Full-stack microservices engineering and empirical deep-learning research.
+          </p>
+        </div>
+
+        <div class="projects-stack">
+          <!-- Project 1: FarmXP -->
+          <article class="card project-card reveal">
+            <div class="project-top-bar">
+              <div class="project-badges">
+                <span class="badge badge-accent">Full Stack &amp; Microservices</span>
+                <span class="badge badge-subtle">SIH 2025</span>
+              </div>
+            </div>
+
+            <div class="project-head">
+              <h3 class="project-title">
+                FarmXP &ndash; Gamified Platform for Sustainable Farming Practices
+              </h3>
+              <p class="project-summary">
+                Developed a gamified agricultural platform designed to encourage sustainable farming
+                practices through digital learning, progress tracking, and AI-powered assistance.
+              </p>
+            </div>
+
+            <div class="project-metrics" aria-label="FarmXP architecture highlights">
+              <div class="mini-stat">
+                <span class="mini-stat-value">9 Services</span>
+                <span class="mini-stat-label">Spring Boot Microservices</span>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-stat-value">40+ Screens</span>
+                <span class="mini-stat-label">React 19 Across 15 Modules</span>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-stat-value">Gemini AI</span>
+                <span class="mini-stat-label">Assistant &amp; Sustainability Scoring</span>
+              </div>
+            </div>
+
+            <ul class="feature-list">
+              <li>
+                Architected a microservices-based backend using <strong>nine Spring Boot services</strong>,
+                Java 21, Spring Cloud, Eureka, and API Gateway.
+              </li>
+              <li>
+                Implemented authentication, farmer profiles, and learning modules using a structured
+                <strong>Oracle database</strong>.
+              </li>
+              <li>
+                Developed a <strong>React 19 frontend</strong> with more than <strong>40 screens
+                across 15 modules</strong>, featuring learning modules, progress tracking,
+                leaderboards, and government scheme information.
+              </li>
+              <li>
+                Integrated <strong>Google Gemini conversational AI</strong> to assist farmers and
+                implemented a <strong>weighted sustainability scoring system</strong> based on
+                learning, farming metrics, and verified practices.
+              </li>
+            </ul>
+
+            <div class="project-footer">
+              <ul class="tech-tags" aria-label="Technologies used in FarmXP">
+                <li>React.js</li>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Microservices</li>
+                <li>Google Gemini AI</li>
+                <li>Oracle</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Project 2: CIFAKE Research Project -->
+          <article class="card project-card reveal">
+            <div class="project-top-bar">
+              <div class="project-badges">
+                <span class="badge badge-accent">Research Project</span>
+                <span class="badge badge-subtle">Unpublished Research Work</span>
+              </div>
+              <span class="mono-meta">Duration: 1 Month</span>
+            </div>
+
+            <div class="project-head">
+              <h3 class="project-title">
+                CIFAKE &ndash; Deep Learning-Based Detection of Real and AI-Generated Synthetic Images
+              </h3>
+              <p class="project-summary">
+                Conducted an experimental investigation of deep-learning approaches for distinguishing
+                real images from AI-generated synthetic images, focusing on model comparison,
+                robustness, and generalization.
+              </p>
+            </div>
+
+            <div class="project-metrics" aria-label="CIFAKE key experimental metrics">
+              <div class="mini-stat">
+                <span class="mini-stat-value">97.21%</span>
+                <span class="mini-stat-label">Best CIFAKE Test Accuracy (Swin-Tiny &middot; F1: 97.23%)</span>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-stat-value">120,000</span>
+                <span class="mini-stat-label">Images Evaluated (100k Train / 20k Test &middot; 32&times;32 px)</span>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-stat-value">60.13%</span>
+                <span class="mini-stat-label">Held-Out Balanced Accuracy (+10.20 pp from 49.93%)</span>
+              </div>
+            </div>
+
+            <div class="results-block">
+              <p class="results-heading">CIFAKE Test Set Model Comparison</p>
+              <div class="results-table-wrap">
+                <table class="results-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Model</th>
+                      <th scope="col">CIFAKE Test Accuracy</th>
+                      <th scope="col">F1-score</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ResNet-18</td>
+                      <td class="mono-cell">95.64%</td>
+                      <td class="mono-cell">95.52%</td>
+                    </tr>
+                    <tr>
+                      <td>Vision Transformer Tiny (ViT-Tiny)</td>
+                      <td class="mono-cell">96.76%</td>
+                      <td class="mono-cell">96.68%</td>
+                    </tr>
+                    <tr class="is-best-row">
+                      <td>Swin Transformer Tiny (Swin-Tiny)</td>
+                      <td class="mono-cell">97.21%</td>
+                      <td class="mono-cell">97.23%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <ul class="feature-list">
+              <li>
+                <strong>Dataset Protocol:</strong> Evaluated across <strong>120,000 images</strong>
+                at 32 &times; 32 pixel resolution &mdash; 100,000 training images (50,000 real,
+                50,000 synthetic) and 20,000 testing images (10,000 real, 10,000 synthetic).
+              </li>
+              <li>
+                <strong>Robustness &amp; Distribution Shift:</strong> Tested robustness under
+                increasing Gaussian noise and evaluated generalization on an external dataset and
+                held-out generator data, identifying significant performance degradation under
+                distribution shifts.
+              </li>
+              <li>
+                <strong>Generalization Experiment:</strong> Investigated generator-diverse training
+                combined with JPEG augmentation, improving held-out balanced accuracy from
+                <strong>49.93% to 60.13%</strong> (a 10.20 percentage-point improvement).
+              </li>
+            </ul>
+
+            <div class="project-footer">
+              <ul class="tech-tags" aria-label="Technologies used in CIFAKE research project">
+                <li>Python</li>
+                <li>PyTorch</li>
+                <li>Deep Learning</li>
+                <li>ResNet-18</li>
+                <li>Vision Transformer Tiny</li>
+                <li>Swin Transformer Tiny</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INTERNSHIP ==================== -->
+    <section class="section" id="internship" aria-labelledby="internship-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">04 // Experience</p>
+          <h2 id="internship-heading" class="section-title">Internship</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <article class="card timeline-card reveal">
+            <div class="timeline-header">
+              <div>
+                <span class="badge badge-accent">On-Campus Internship</span>
+                <h3 class="timeline-role">Full Stack Java Integrated with AI</h3>
+              </div>
+              <span class="mono-meta">Completed: 18 July 2026</span>
+            </div>
+
+            <p class="body-text">
+              Completed an on-campus internship focused on Full Stack Java Development integrated
+              with Artificial Intelligence.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section class="section section-alt" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">05 // Academics</p>
+          <h2 id="education-heading" class="section-title">Education</h2>
+        </div>
+
+        <article class="card education-card reveal">
+          <div class="education-main">
+            <div class="icon-badge icon-badge-lg" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c0 2 2.7 3 6 3s6-1 6-3v-5"></path>
+              </svg>
+            </div>
+
+            <div class="education-info">
+              <h3 class="education-degree">B.E. Electronics and Communication Engineering</h3>
+              <p class="education-school">Karpagam College of Engineering, Coimbatore</p>
+              <div class="coursework-block">
+                <span class="coursework-label">Relevant Coursework:</span>
+                <ul class="coursework-list" aria-label="Relevant coursework">
+                  <li>Data Structures</li>
+                  <li>Algorithms</li>
+                  <li>Database Management Systems</li>
+                  <li>Object-Oriented Programming</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="education-metrics">
+            <span class="metric-pill">Expected Graduation: April 2028</span>
+            <span class="metric-pill metric-pill--accent">CGPA: 8.4 / 10</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <section class="section" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">06 // Competitive Programming</p>
+          <h2 id="achievements-heading" class="section-title">Achievements</h2>
+        </div>
+
+        <article class="card achievement-card reveal">
+          <div class="achievement-intro">
+            <div class="icon-badge icon-badge-lg" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="card-title">Data Structures &amp; Algorithms &mdash; LeetCode</h3>
+              <p class="body-text-sm">
+                Consistent problem solving and competitive programming practice on LeetCode.
+              </p>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-tile">
+              <span class="stat-value">200+</span>
+              <span class="stat-label">Problems Solved on LeetCode</span>
+            </div>
+            <div class="stat-tile">
+              <span class="stat-value">1473</span>
+              <span class="stat-label">LeetCode Contest Rating</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section class="section section-alt" id="certifications" aria-labelledby="certifications-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">07 // Credentials</p>
+          <h2 id="certifications-heading" class="section-title">Certifications</h2>
+        </div>
+
+        <div class="cert-grid">
+          <article class="card cert-card reveal">
+            <div class="card-icon-row">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="cert-issuer">Google</span>
+                <h3 class="card-title">Google AI Essentials</h3>
+              </div>
+            </div>
+            <p class="body-text-sm">
+              Covering AI tool usage, productivity workflows, and responsible AI practices.
+            </p>
+          </article>
+
+          <article class="card cert-card reveal">
+            <div class="card-icon-row">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6"></circle>
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="cert-issuer">Google</span>
+                <h3 class="card-title">Google Prompting Essentials</h3>
+              </div>
+            </div>
+            <p class="body-text-sm">
+              Covering prompt design, data analysis, and advanced prompting techniques for complex
+              tasks.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <p class="section-eyebrow">08 // Get In Touch</p>
+          <h2 id="contact-heading" class="section-title">Contact</h2>
+          <p class="section-lead">
+            Open to Software Developer opportunities, internships, and collaborative engineering
+            projects.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Email -->
+          <div class="card contact-card reveal">
+            <div class="contact-card-top">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <button
+                type="button"
+                class="copy-btn"
+                id="copy-email-btn"
+                data-copy="gurumoorthy5306@gmail.com"
+                aria-label="Copy email address"
+              >
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <p class="contact-label">Email</p>
+            <a href="mailto:gurumoorthy5306@gmail.com" class="contact-value contact-link">
+              gurumoorthy5306@gmail.com
+            </a>
+          </div>
+
+          <!-- Phone -->
+          <a
+            href="tel:+918610682358"
+            class="card contact-card contact-card--interactive reveal"
+            aria-label="Call +91 8610682358"
+          >
+            <div class="contact-card-top">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <svg class="external-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+            <p class="contact-label">Phone</p>
+            <span class="contact-value">+91 8610682358</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/gurumoorthyv/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card contact-card contact-card--interactive reveal"
+          >
+            <div class="contact-card-top">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+              <svg class="external-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+            <p class="contact-label">LinkedIn</p>
+            <span class="contact-value">linkedin.com/in/gurumoorthyv</span>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/Gurumoorthy292"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card contact-card contact-card--interactive reveal"
+          >
+            <div class="contact-card-top">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/>
+                </svg>
+              </div>
+              <svg class="external-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+            <p class="contact-label">GitHub</p>
+            <span class="contact-value">github.com/Gurumoorthy292</span>
+          </a>
+
+          <!-- Location -->
+          <div class="card contact-card reveal">
+            <div class="contact-card-top">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+            </div>
+            <p class="contact-label">Location</p>
+            <span class="contact-value">Krishnagiri, Tamil Nadu, India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark--sm" aria-hidden="true">VG</span>
+        <p class="copyright">&copy; <span id="current-year">2026</span> V GURUMOORTHY. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <a
+          href="mailto:gurumoorthy5306@gmail.com"
+          class="footer-icon-link"
+          aria-label="Email V GURUMOORTHY"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </a>
+        <a
+          href="tel:+918610682358"
+          class="footer-icon-link"
+          aria-label="Call +91 8610682358"
+        >
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/gurumoorthyv/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-icon-link"
+          aria-label="LinkedIn (opens in new tab)"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+        </a>
+        <a
+          href="https://github.com/Gurumoorthy292"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-icon-link"
+          aria-label="GitHub (opens in new tab)"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .5z"/>
+          </svg>
+        </a>
+        <a href="#home" class="back-to-top" aria-label="Scroll back to top">
+          <span>Top</span>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Accessible Copy Feedback Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
